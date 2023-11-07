@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import logo from '../../Assets/Eva_logo.png'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { UserContext } from '../../Context/UserContext';
 
 // import { UserContext } from '../../Context/UserContext';
@@ -8,9 +8,11 @@ import { UserContext } from '../../Context/UserContext';
 
 const Header = () => {
   const [userData, setUserData] = useContext(UserContext);
+  const navigate = useNavigate()
 
   const handleRefresh = () => {
     window.location.reload(); // Reloads the page
+    navigate('/')
   };
 
   
