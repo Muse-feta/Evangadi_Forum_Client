@@ -10,12 +10,15 @@ const Header = () => {
   const [userData, setUserData] = useContext(UserContext);
   const navigate = useNavigate()
 
-  const handleRefresh = () => {
-    window.location.reload(); // Reloads the page
-    navigate('/')
-  };
 
-  
+  const logout = () => {
+    setUserData({
+      user:undefined,
+      token:undefined,
+    });
+  }
+
+
 
   
     
@@ -37,12 +40,14 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <button onClick={handleRefresh}
-              
-              className="bg-[#516CF0] px-[30px] sm:px-[75px] py-2 text-white hover:bg-[#FE8402] rounded-md"
-            >
-              {!userData.user ? "Sign In" : 'logOut'}
-            </button>
+            <Link to="/" >
+              <button 
+                onClick={logout}
+                className="bg-[#516CF0] px-[30px] sm:px-[75px] py-2 text-white hover:bg-[#FE8402] rounded-md"
+              >
+                {!userData.user ? "Sign In" : "logOut"}
+              </button>
+            </Link>
           </li>
         </ul>
       </div>

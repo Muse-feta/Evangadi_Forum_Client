@@ -62,6 +62,7 @@ const App = () => {
         <Route path="/home" element={<Home />} />
         <Route path="/askquestion" element={<AskQuestion />} />
         <Route path="/answer/:questionid" element={<Answer />} />
+        <Route path='*' element={<LogIn/>} />
       </Route>
     </Routes>
   );

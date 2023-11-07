@@ -48,10 +48,10 @@ const Home = () => {
 
   // console.log(userData)
   useEffect(() => {
-    if (!userData.user) navigate("/");
+    if (!userData.token) navigate('/')
   }, [userData.user, navigate]);
 
-  console.log(question)
+  // console.log(question)
 
   return (
     <div>
