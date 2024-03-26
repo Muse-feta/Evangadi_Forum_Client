@@ -5,7 +5,7 @@ import axios from "../Axios";
 import { useNavigate, useParams } from 'react-router-dom';
 import { BiSolidUserCircle } from "react-icons/bi";
 
-
+ 
 const Answer = () => {
   // const [answer,]
   const [answer, setAnswer] = useState([]);
