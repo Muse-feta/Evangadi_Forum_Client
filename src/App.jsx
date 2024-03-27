@@ -1,7 +1,7 @@
 import React,{ useContext, useEffect, useState } from 'react'
 import { UserContext, UserProvider } from './Context/UserContext';
 import { Route, Routes } from 'react-router-dom';
-import SignUp from './Pages/Signup_in/SignUp';
+import SignUp from './Pages/Signup_in/SignUp'; 
 import LogIn from './Pages/Signup_in/LogIn';
 import SharedLalyout from './Pages/SharedLalyout/SharedLalyout';
 import axios from './Axios'
